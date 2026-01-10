@@ -15,7 +15,9 @@ A lightweight, extensible starter template for WPF applications using MVVM, depe
 ## Quickstart
 1. Requirements: .NET 10 SDK and Visual Studio with WPF support.  
 2. Clone the repo:
-   - `git clone https://github.com/msamula/WPF.MVVM.Starter.git`
+
+         git clone https://github.com/msamula/WPF.MVVM.Starter.git
+
 3. Open the project in Visual Studio.  
 4. Build & run: choose __Debug__ or __Release__ and start the application.
 
