@@ -44,7 +44,7 @@ dotnet new wpfmvvmstarter -n MyCoolApp
 ### 4. Open & Run
 
 1. Navigate to your new folder: cd MyCoolApp
-2. Open MyCoolApp.sln in Visual Studio.
+2. Open MyCoolApp.slnx in Visual Studio.
 3. Press F5 to build and run!
 
 ## Uninstall
@@ -54,6 +54,13 @@ Run:
 ```bash
 # Uninstall the template
 dotnet new uninstall ./WPF.MVVM.Starter
+```
+
+If this command does not work, then run the following command to list all installed template packages that can be uninstalled.
+
+```bash
+# List all installed template packages that can be uninstalled
+dotnet new uninstall
 ```
 
 ## Project layout (excerpt)
