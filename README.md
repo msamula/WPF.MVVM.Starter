@@ -12,17 +12,49 @@ A lightweight, extensible starter template for WPF applications using MVVM, depe
 - Example `INavigationService` / `NavigationService` implementation.
 - Easy to extend with additional views, viewmodels and services.
 
-## Quickstart
-1. Requirements: .NET 10 SDK and Visual Studio with WPF support.  
-2. Install the Template: Open a terminal and run:
+## 🚀 Installation & Usage
 
-         dotnet new install https://github.com/msamula/WPF.MVVM.Starter.git
+Follow these steps to use this project as a template for your own WPF applications.
 
-3. Create your Project: Navigate to your desired project folder and run:
+### 1. Requirements
+* [.NET 10 SDK](https://dotnet.microsoft.com/download)
+* Visual Studio 2026 (with WPF Workload) or JetBrains Rider
 
-        dotnet new wpfmvvmstarter -n <YOUR_PROJECT_NAME>
+### 2. Install the Template
+First, clone this repository and install it into your local `.dotnet` template engine:
 
-4. Open & Run: Open <YOUR_PROJECT_NAME>.sln in Visual Studio and press F5.
+```bash
+# Clone the repository
+git clone https://github.com/msamula/WPF.MVVM.Starter.git
+
+# Install the template
+dotnet new install ./WPF.MVVM.Starter
+```
+
+Note: After installation, you can safely delete the cloned folder if you wish; the template is stored in your local .NET template cache.
+
+### 3. Create a New Project
+Now you can create a new project anywhere on your computer using the template's short name:
+
+```bash
+# Create a new project with your own name
+dotnet new wpfmvvmstarter -n MyCoolApp
+```
+
+### 4. Open & Run
+
+1. Navigate to your new folder: cd MyCoolApp
+2. Open MyCoolApp.sln in Visual Studio.
+3. Press F5 to build and run!
+
+## Uninstall
+
+Run: 
+
+```bash
+# Uninstall the template
+dotnet new uninstall ./WPF.MVVM.Starter
+```
 
 ## Project layout (excerpt)
 - `App.xaml` / `App.xaml.cs` — host integration and application lifecycle  
