@@ -76,6 +76,7 @@ dotnet new uninstall
 - Microsoft.Extensions.Hosting  
 - Microsoft.Extensions.DependencyInjection  
 - Microsoft.Extensions.Configuration.Json
+- Microsoft.Xaml.Behaviors.Wpf
 - CommunityToolkit.Mvvm
 
 ## License
