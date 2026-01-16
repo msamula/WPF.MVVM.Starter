@@ -40,6 +40,19 @@ Now you can create a new project anywhere on your computer using the template's 
 # Create a new project with your own name
 dotnet new wpfmvvmstarter -n MyCoolApp
 ```
+You can also add the author and product name to this command:
+
+```bash
+# Create a new project with your own name, author and product name
+dotnet new wpfmvvmstarter -n MyCoolApp --author "YOUR_NAME" --product"MyCoolApp"
+```
+
+If you want to see all parameters, run the following command:
+
+```bash
+# Show all parameters
+dotnet new wpfmvvmstarter --help
+```
 
 ### 4. Open & Run
 
