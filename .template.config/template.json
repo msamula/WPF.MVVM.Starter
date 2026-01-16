@@ -11,7 +11,7 @@
     "author": {
       "type": "parameter",
       "datatype": "string",
-      "defaultValue": "Your Name",
+      "defaultValue": "Unknown",
       "replaces": "__AUTHOR__",
       "description": "Author name"
     },
