@@ -14,13 +14,8 @@
 	</PropertyGroup>
 
 	<PropertyGroup>
-		<!--<Company>__COMPANY__</Company>-->
 		<Authors>__AUTHOR__</Authors>
 		<Product>__PRODUCT_NAME__</Product>
-		<!--<Description>__DESCRIPTION__</Description>-->
-		<!--<PackageProjectUrl>__REPOSITORY_URL__</PackageProjectUrl>-->
-		<!--<PackageLicenseExpression>MIT</PackageLicenseExpression>-->
-		<!--<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>-->
 	</PropertyGroup>
 
 	<PropertyGroup>
