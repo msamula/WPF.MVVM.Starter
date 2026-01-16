@@ -6,6 +6,24 @@
   "identity": "MSamula.WPF.MVVM.Starter",
   "shortName": "wpfmvvmstarter",
   "sourceName": "WPF.MVVM.Starter",
+
+  "symbols": {
+    "author": {
+      "type": "parameter",
+      "datatype": "string",
+      "defaultValue": "Your Name",
+      "replaces": "__AUTHOR__",
+      "description": "Author name"
+    },
+    "product": {
+      "type": "parameter",
+      "datatype": "string",
+      "defaultValue": "MyWpfApp",
+      "replaces": "__PRODUCT_NAME__",
+      "description": "Product name"
+    }
+  },
+
   "sources": [
     {
       "modifiers": [
