@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Hosting;
 using System.Windows;
 using WPF.MVVM.Starter.Infrastructure;
+using WPF.MVVM.Starter.Infrastructure.Configuration;
 using WPF.MVVM.Starter.Views;
 
 namespace WPF.MVVM.Starter
@@ -15,7 +16,8 @@ namespace WPF.MVVM.Starter
             _host = Host.CreateDefaultBuilder()
                         .ConfigureServices((context, services) =>
                         {
-                            services.AddAplicationServices();
+                            services.AddConfiguration(context.Configuration);
+                            services.AddApplicationServices();
                         }).Build();
         }
 

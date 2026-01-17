@@ -5,9 +5,9 @@ using WPF.MVVM.Starter.Views;
 
 namespace WPF.MVVM.Starter.Infrastructure
 {
-    public static class DependencyInjection
+    public static class ApplicationDependencyInjection
     {
-        public static IServiceCollection AddAplicationServices(this IServiceCollection services)
+        public static IServiceCollection AddApplicationServices(this IServiceCollection services)
         {
             services.AddViews();
             services.AddViewModels();

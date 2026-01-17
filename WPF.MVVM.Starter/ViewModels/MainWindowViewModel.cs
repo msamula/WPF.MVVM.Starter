@@ -1,4 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using Microsoft.Extensions.Options;
+using WPF.MVVM.Starter.Infrastructure.Configuration.Settings;
 
 namespace WPF.MVVM.Starter.ViewModels
 {
@@ -11,9 +13,9 @@ namespace WPF.MVVM.Starter.ViewModels
             set => SetProperty(ref _applicationTitle, value);
         }
 
-        public MainWindowViewModel()
+        public MainWindowViewModel(IOptions<AppSettings> options)
         {
-            ApplicationTitle = "WPF MVVM Starter";
+            ApplicationTitle = options.Value.ApplicationTitle ?? "Configuration error";
         }
     }
 }
