@@ -6,9 +6,9 @@ A lightweight, extensible starter template for WPF applications using MVVM, depe
 `WPF MVVM Starter` demonstrates a modern structure for `.NET 10` WPF applications. The project uses `Host.CreateDefaultBuilder` for lifecycle management, `Microsoft.Extensions.DependencyInjection` for DI, and `CommunityToolkit.Mvvm` for ViewModel helpers.
 
 ## Key features
-- Clear separation of concerns: `Views`, `ViewModels`, `Services`, and `Infrastructure`.
+- Clear separation of concerns: `Views`, `ViewModels`, `Models`, `Services` and `Infrastructure`.
 - Host-based startup and shutdown logic in `App.xaml.cs`.
-- Centralized DI registrations in `Infrastructure/DependencyInjection.cs`.
+- Centralized DI registrations in `Infrastructure/ApplicationDependencyInjection.cs`.
 - Example `INavigationService` / `NavigationService` implementation.
 - Easy to extend with additional views, viewmodels and services.
 
@@ -74,8 +74,11 @@ dotnet new uninstall
 - `App.xaml` / `App.xaml.cs` — host integration and application lifecycle  
 - `Views/MainWindow.xaml` / `MainWindow.xaml.cs` — startup view  
 - `ViewModels/MainWindowViewModel.cs` — example ViewModel  
-- `Infrastructure/DependencyInjection.cs` — DI registration  
+- `Infrastructure/ApplicationDependencyInjection.cs` — Main DI registration  
+- `Infrastructure/Configuration/` — Configuration settings and DI
 - `Services/Navigation` — navigation service example
+- `Models/` — Data models
+- `Assets/` — Application assets (images, icons)
 
 ## Tech stack
 - .NET 10 (WPF)  
