@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "WPF.MVVM.Starter": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
