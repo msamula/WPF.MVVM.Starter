@@ -37,7 +37,8 @@
 	  <Folder Include="Assets\Images\" />
 	  <Folder Include="Assets\Icons\" />
 	  <Folder Include="Models\" />
-	  <Folder Include="Resources\" />
+	  <Folder Include="Resources\Converters\" />
+	  <Folder Include="Resources\Styles\" />
 	</ItemGroup>
 
 	<ItemGroup>

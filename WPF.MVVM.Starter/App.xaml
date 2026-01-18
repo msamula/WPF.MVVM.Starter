@@ -2,6 +2,22 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                
+                <!--Colors-->
+                <ResourceDictionary Source="/Resources/Colors/Colors.xaml"/>
+
+                <!--Styles-->
+                <!--<ResourceDictionary Source=""/>-->
+
+                <!--Converters-->
+                <!--<ResourceDictionary Source=""/>-->
+
+                <!--ViewTemplates (UserControls)-->
+                <ResourceDictionary Source="/Resources/ViewTemplates/ViewTemplates.xaml"/>
+                
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
