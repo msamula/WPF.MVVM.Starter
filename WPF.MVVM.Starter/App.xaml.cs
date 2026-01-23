@@ -1,5 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
+using System.Diagnostics;
 using System.Windows;
 using WPF.MVVM.Starter.Infrastructure;
 using WPF.MVVM.Starter.Infrastructure.Configuration;
@@ -13,6 +15,8 @@ namespace WPF.MVVM.Starter
 
         public App()
         {
+            RegisterGlobalExceptionHandlers();
+
             _host = Host.CreateDefaultBuilder()
                         .ConfigureServices((context, services) =>
                         {
@@ -23,20 +27,69 @@ namespace WPF.MVVM.Starter
 
         protected override async void OnStartup(StartupEventArgs e)
         {
-            await _host.StartAsync();
+            try
+            {
+                await _host.StartAsync();
 
-            var mainWindow = _host.Services.GetRequiredService<MainWindow>();
-            mainWindow.Show();
+                var mainWindow = _host.Services.GetRequiredService<MainWindow>();
+                mainWindow.Show();
+            }
+            catch (Exception ex)
+            {
+                LogException(ex, "App failed to start.");
+                Shutdown();
+            }
 
             base.OnStartup(e);
         }
 
-        protected override async void OnExit(ExitEventArgs e)
+        protected override void OnExit(ExitEventArgs e)
         {
-            await _host.StopAsync();
-            _host.Dispose();
+            try
+            {
+                _host.StopAsync().GetAwaiter().GetResult();
+            }
+            finally
+            {
+                _host.Dispose();
+            }
 
             base.OnExit(e);
+        }
+
+        private void RegisterGlobalExceptionHandlers()
+        {
+            // UI Thread (WPF)
+            DispatcherUnhandledException += (s, e) =>
+            {
+                LogException(e.Exception, "An unhandled exception occurred.");
+                e.Handled = true;
+            };
+
+            // Non-UI Threads (General .NET)
+            AppDomain.CurrentDomain.UnhandledException += (s, e) =>
+            {
+                LogException(e.ExceptionObject as Exception, "An AppDomain unhandled exception occurred.");
+            };
+
+            // Unawaited Tasks (Async)
+            TaskScheduler.UnobservedTaskException += (s, e) =>
+            {
+                LogException(e.Exception, "An unobserved Task exception occurred.");
+                e.SetObserved();
+            };
+        }
+
+        private void LogException(Exception? ex = null, string? message = null)
+        {
+            if (_host == null)
+            {
+                Debug.WriteLine($"CRITICAL (No Host): {message} {ex}");
+                return;
+            }
+
+            var logger = _host.Services.GetService<ILogger<App>>();
+            logger?.LogCritical(ex, message);
         }
     }
 }

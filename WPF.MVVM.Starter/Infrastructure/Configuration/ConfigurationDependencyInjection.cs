@@ -8,7 +8,7 @@ namespace WPF.MVVM.Starter.Infrastructure.Configuration
     {
         public static IServiceCollection AddConfiguration(this IServiceCollection services, IConfiguration configuration)
         {
-            services.Configure<AppSettings>(configuration.GetSection("AppSettings"));
+            services.Configure<AppSettings>(configuration.GetSection(nameof(AppSettings)));
 
             return services;
         }
