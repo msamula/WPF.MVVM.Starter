@@ -2,8 +2,10 @@
 
 A lightweight, extensible starter template for WPF applications using MVVM, dependency injection and the Microsoft Generic Host.
 
+
 ## About this project
 `WPF MVVM Starter` demonstrates a modern structure for `.NET 10` WPF applications. The project uses `Host.CreateDefaultBuilder` for lifecycle management, `Microsoft.Extensions.DependencyInjection` for DI, and `CommunityToolkit.Mvvm` for ViewModel helpers.
+
 
 ## Key features
 - Clear separation of concerns: `Views`, `ViewModels`, `Models`, `Services` and `Infrastructure`.
@@ -11,6 +13,7 @@ A lightweight, extensible starter template for WPF applications using MVVM, depe
 - Centralized DI registrations in `Infrastructure/ApplicationDependencyInjection.cs`.
 - Example `INavigationService` / `NavigationService` implementation.
 - Easy to extend with additional views, viewmodels and services.
+
 
 ## 🚀 Installation & Usage
 
@@ -54,6 +57,7 @@ dotnet new wpfmvvmstarter --help
 2. Open MyCoolApp.slnx in Visual Studio.
 3. Press F5 to build and run!
 
+
 ## Uninstall
 
 Run: 
@@ -70,6 +74,7 @@ If this command does not work, then run the following command to list all instal
 dotnet new uninstall
 ```
 
+
 ## Project layout (excerpt)
 - `App.xaml` / `App.xaml.cs` — host integration and application lifecycle  
 - `Views/MainWindow.xaml` / `MainWindow.xaml.cs` — startup view  
@@ -80,6 +85,7 @@ dotnet new uninstall
 - `Models/` — Data models
 - `Assets/` — Application assets (images, icons)
 
+
 ## Tech stack
 - .NET 10 (WPF)  
 - C# 14  
@@ -88,6 +94,7 @@ dotnet new uninstall
 - Microsoft.Extensions.Configuration.Json
 - Microsoft.Xaml.Behaviors.Wpf
 - CommunityToolkit.Mvvm
+
 
 ## License
 MIT License
@@ -112,7 +119,12 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
+
 ## Third-party packages and licenses
-This project depends on third-party NuGet packages. Each package is distributed
-under its own license; you must verify and comply with those licenses when
-distributing or publishing the application.
+
+This project depends on third-party NuGet packages. A full list of these 
+dependencies, including their respective license texts and attributions, 
+can be found in the [ThirdPartyNotices.txt](./ThirdPartyNotices.txt) file.
+
+You must verify and comply with those licenses when distributing or 
+publishing the application.
