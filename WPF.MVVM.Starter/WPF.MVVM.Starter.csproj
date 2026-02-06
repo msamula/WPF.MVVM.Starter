@@ -16,6 +16,8 @@
 	<PropertyGroup>
 		<Authors>__AUTHOR__</Authors>
 		<Product>__PRODUCT_NAME__</Product>
+		<Description>__DESCRIPTION__</Description>
+		<Copyright>© __YEAR__ __AUTHOR__</Copyright>
 	</PropertyGroup>
 
 	<PropertyGroup>
