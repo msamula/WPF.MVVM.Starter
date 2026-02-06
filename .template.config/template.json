@@ -21,6 +21,13 @@
       "defaultValue": "MyWpfApp",
       "replaces": "__PRODUCT_NAME__",
       "description": "Product name"
+    },
+    "description": {
+      "type": "parameter",
+      "datatype": "string",
+      "defaultValue": "A WPF application created from WPF.MVVM.Starter template.",
+      "replaces": "__DESCRIPTION__",
+      "description": "Application description"
     }
   },
 
