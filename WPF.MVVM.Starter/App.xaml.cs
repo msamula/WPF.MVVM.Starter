@@ -37,6 +37,7 @@ namespace WPF.MVVM.Starter
             catch (Exception ex)
             {
                 LogException(ex, "App failed to start.");
+                MessageBox.Show(ex.Message, ex.Source);
                 Shutdown();
             }
 
