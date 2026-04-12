@@ -4,7 +4,10 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                
+
+                <!--Fluent theme-->
+                <ResourceDictionary Source="pack://application:,,,/PresentationFramework.Fluent;component/Themes/Fluent.xaml" />
+
                 <!--Colors-->
                 <ResourceDictionary Source="/Resources/Colors/Colors.xaml"/>
 

@@ -10,7 +10,7 @@
         Title="{Binding ApplicationTitle}" 
         Height="450" Width="800">
     
-    <Grid Background="{StaticResource PrimaryBrush}">
+    <Grid>
         
     </Grid>
 </Window>

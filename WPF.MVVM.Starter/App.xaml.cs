@@ -31,6 +31,8 @@ namespace WPF.MVVM.Starter
             {
                 await _host.StartAsync();
 
+                SetGlobalThemeMode(ThemeMode.System);
+
                 var mainWindow = _host.Services.GetRequiredService<MainWindow>();
                 mainWindow.Show();
             }
@@ -91,6 +93,11 @@ namespace WPF.MVVM.Starter
 
             var logger = _host.Services.GetService<ILogger<App>>();
             logger?.LogCritical(ex, message);
+        }
+
+        private void SetGlobalThemeMode(ThemeMode themeMode)
+        {
+            Current.ThemeMode = themeMode;
         }
     }
 }

@@ -1,6 +1,29 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
+    <!--Windows accent color resource keys-->
+
+    <!--AccentColorKey-->
+    <!--AccentColorLight1Key-->
+    <!--AccentColorLight2Key-->
+    <!--AccentColorLight3Key-->
+    <!--AccentColorDark1Key-->
+    <!--AccentColorDark2Key-->
+    <!--AccentColorDark3Key-->
+
+    <!--Windows accent brushes resource keys-->
+
+    <!--AccentColorBrushKey-->
+    <!--AccentColorLight1BrushKey-->
+    <!--AccentColorLight2BrushKey-->
+    <!--AccentColorLight3BrushKey-->
+    <!--AccentColorDark1BrushKey-->
+    <!--AccentColorDark2BrushKey-->
+    <!--AccentColorDark3BrushKey-->
+
+    <!--Foreground="{DynamicResource {x:Static SystemColors.AccentColorBrushKey}}"-->
+
+    
     <Color x:Key="PrimaryColor">#296374</Color>
     <SolidColorBrush x:Key="PrimaryBrush" Color="{StaticResource PrimaryColor}"/>
 </ResourceDictionary>
