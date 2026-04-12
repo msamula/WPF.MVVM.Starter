@@ -13,6 +13,7 @@ A lightweight, extensible starter template for WPF applications using MVVM, depe
 - Centralized DI registrations in `Infrastructure/ApplicationDependencyInjection.cs`.
 - Example `INavigationService` / `NavigationService` implementation.
 - Easy to extend with additional views, viewmodels and services.
+- Includes fluent theme mode.
 
 
 ## 🚀 Installation & Usage
